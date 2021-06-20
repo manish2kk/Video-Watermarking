@@ -1,0 +1,1 @@
+function [x,y]=fractsplinefunction(alpha,tau,type,J)dJ=4;M=2^(J+dJ);x=((0:(M-1))-M/2)/2^J+1;w=zeros(1,M);w(M-M/2^(J+1))=1;[FFTanalysisfilters,FFTsynthesisfilters]=FFTfractsplinefilters(M,alpha,tau,type);y=2^(J/2)*FFTwaveletsynthesis1D(w,FFTsynthesisfilters,J);
